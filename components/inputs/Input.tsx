@@ -34,6 +34,7 @@ const Input: React.FC<InputProps> = ({
       <input
         id={id}
         disabled={disabled}
+        type={type}
         {...register(id, { required })}
         placeholder=" "
         className={`peer w-full p-4 pt-6 font-light bg-white border-2 rounded-md outline-none transition disabled:opacity-70 disabled:cursor-not-allowed ${
