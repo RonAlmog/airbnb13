@@ -1,11 +1,13 @@
 // layout is by default server component!!!
 import { Nunito } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar/navbar";
+
 import RegisterModal from "@/components/modals/RegisterModal";
 import ToasterProvider from "./providers/ToasterProvider";
 import LoginModal from "@/components/modals/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
+import Navbar from "@/components/navbar/Navbarz";
+import { SafeUser } from "./types";
 
 export const metadata = {
   title: "Airbnb",
