@@ -33,18 +33,17 @@ const ListingClient: React.FC<ListingClientProps> = ({
 }) => {
   const loginModal = useLoginModal();
   const router = useRouter();
-  // create a list of disabled dates.
-  const disabledDates = useMemo(() => {
-    let dates: Date[] = [];
-    reservations.forEach((reservation) => {
-      const range = eachDayOfInterval({
-        start: new Date(reservation.startDate),
-        end: new Date(reservation.endDate),
-      });
-      dates = [...dates, ...range];
-      return dates;
+
+  let disabledDates: Date[] = [];
+
+  reservations.forEach((reservation) => {
+    const range = eachDayOfInterval({
+      start: new Date(reservation.startDate),
+      end: new Date(reservation.endDate),
     });
-  }, [reservations]);
+    console.log("range", range);
+    disabledDates = [...disabledDates, ...range];
+  });
 
   const [isLoading, setIsLoading] = useState(false);
   const [totalPrice, setTotalPrice] = useState(listing.price);
