@@ -41,7 +41,6 @@ const ListingClient: React.FC<ListingClientProps> = ({
       start: new Date(reservation.startDate),
       end: new Date(reservation.endDate),
     });
-    console.log("range", range);
     disabledDates = [...disabledDates, ...range];
   });
 
