@@ -2,9 +2,9 @@
 
 import { SafeListing, SafeReservation, SafeUser } from "@/app/types";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { categories } from "@/components/navbar/Categories";
-import Container from "@/components/Container";
-import ListingHead from "@/components/listings/ListingHead";
+import { categories } from "@/app/components/navbar/Categories";
+import Container from "@/app/components/Container";
+import ListingHead from "@/app/components/listings/ListingHead";
 import ListingInfo from "./ListingInfo";
 import useLoginModal from "@/app/hooks/useLoginModal";
 import { useRouter } from "next/navigation";

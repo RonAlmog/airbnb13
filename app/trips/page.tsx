@@ -1,5 +1,5 @@
-import EmptyState from "@/components/EmptyState";
-import ClientOnly from "@/components/ClientOnly";
+import EmptyState from "@/app/components/EmptyState";
+import ClientOnly from "@/app/components/ClientOnly";
 import getCurrentUser from "../actions/getCurrentUser";
 import getReservations from "../actions/getReservations";
 import TripsClient from "./TripsClient";

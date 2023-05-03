@@ -1,12 +1,12 @@
 "use client";
-import Heading from "@/components/Heading";
+import Heading from "@/app/components/Heading";
 import { SafeReservation, SafeUser } from "../types";
-import Container from "@/components/Container";
+import Container from "@/app/components/Container";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import ListingCard from "@/components/listings/ListingCard";
+import ListingCard from "@/app/components/listings/ListingCard";
 
 interface ReservationClientProps {
   reservations: SafeReservation[];
