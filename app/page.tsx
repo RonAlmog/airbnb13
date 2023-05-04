@@ -2,14 +2,15 @@ import Container from "@/app/components/Container";
 import EmptyState from "@/app/components/EmptyState";
 import getListings, { IListingsParams } from "./actions/getListings";
 import ListingCard from "@/app/components/listings/ListingCard";
-import getCurrentUser from "./actions/getCurrentUser";
+import getCurrentUser from "@/app/actions/getCurrentUser";
 import { SafeListing } from "./types";
 import ClientOnly from "@/app/components/ClientOnly";
 
-interface homeProps {
+interface HomeProps {
   searchParams: IListingsParams;
 }
-const Home = async ({ searchParams }: homeProps) => {
+// this is a server component!
+const Home = async ({ searchParams }: HomeProps) => {
   const listings = await getListings(searchParams);
   const currentUser = await getCurrentUser();
 
